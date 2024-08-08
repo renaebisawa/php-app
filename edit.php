@@ -1,6 +1,6 @@
 <?php
 require_once('functions.php');
-$todo = getSelectedTodo($_GET['id']);
+$todo = getSelectedTodo($_GET['id']); //ユーザーのIDが＄ゲットで受け取っている
 ?>
 <!DOCTYPE html>
 <html lang="ja">

@@ -1,5 +1,6 @@
 <?php
 require_once('functions.php');
+header('Set-Cookie: userId=123')
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +16,7 @@ require_once('functions.php');
        <p>新規作成</p>
      </a>
   </div>
-  <div> 
+  <div>
     <table>
       <tr>
         <th>ID</th>
@@ -32,7 +33,7 @@ require_once('functions.php');
           </td>
           <td>
             <form action="store.php" method="post">
-              <input type="hidden" name="id" value="">
+            <input type="hidden" name="id" value="<?= $todo['id']; ?>">
               <button type="submit">削除</button>
             </form>
           </td>

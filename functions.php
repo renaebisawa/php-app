@@ -8,7 +8,7 @@ function getTodoList()
 
 function getSelectedTodo($id)
 {
-    return getTodoTextById($id); 
+    return getTodoTextById($id);
 }
 
 function savePostedData($post)
@@ -21,6 +21,9 @@ function savePostedData($post)
         case '/edit.php':
             updateTodoData($post);
             break;
+        case '/index.php':
+            deleteTodoData($post['id']);
+            break; // 追記
         default:
             break;
     }
@@ -28,6 +31,10 @@ function savePostedData($post)
 
 function getRefererPath()
 {
-    $urlArray = parse_url($_SERVER['HTTP_REFERER']);
-    return $urlArray['path'];
+    // var_dump('<pre>');
+    // var_dump(parse_url($_SERVER['HTTP_REFERER']));
+    // var_dump('</pre>');
+    // exit;
+    $urlArray = parse_url($_SERVER['HTTP_REFERER']); //SERVER遷移する前のURLを取得、parse(URLを分解）に渡す
+    return $urlArray['path']; //URLの中のパスを取得
 }

